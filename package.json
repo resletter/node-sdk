@@ -1,0 +1,43 @@
+{
+    "name": "@resletter/node-sdk",
+    "version": "1.0.0",
+    "description": "Official Node.js SDK for the Resletter API",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "lint": "eslint src --ext .ts",
+        "typecheck": "tsc --noEmit",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "resletter",
+        "newsletter",
+        "email",
+        "sdk",
+        "api"
+    ],
+    "author": "Resletter",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/resletter/node-sdk"
+    },
+    "homepage": "https://resletter.com/docs",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "tsup": "^8.5.1",
+        "typescript": "^5.9.3",
+        "vitest": "^1.0.0"
+    }
+}
